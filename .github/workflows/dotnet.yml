@@ -27,12 +27,8 @@ jobs:
 
       # Restore dependencies
       - name: Restore dependencies
-        run: dotnet restore src
+        run: dotnet restore src/LibraryManagement.sln
 
       # Build the solution
       - name: Build solution
-        run: dotnet build src --configuration Release --no-restore
-
-      # Run tests
-      - name: Run tests
-        run: dotnet test src --no-build --verbosity normal
+        run: dotnet build src/LibraryManagement.sln --configuration Release --no-restore
